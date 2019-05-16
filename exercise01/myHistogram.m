@@ -5,7 +5,7 @@ function H = myHistogram(im)
 %frequency of corresponding gray value in "im")
 
 %Todo assertion for vector!
-%assert(im<256,"Input not inside the defined intensity range")
+assert(max(max(im))<=255 & min(min(im))>=0,"Input not inside the defined intensity range")
 
 vec = zeros(1,256);
 %sizevector of input image
